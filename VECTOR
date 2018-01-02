@@ -1,0 +1,53 @@
+ std::vector<int > v{10 ,20,52,56};//preinitialized
+    std::vector<int>v1(10);// vector of 10
+    for (int i = 0; i <5 ; ++i) {
+        v1[i]=i+i*i;
+    }
+    cout<<endl<<v1.size();
+    v1.shrink_to_fit();
+    cout<<endl<<v1.size();//size same
+        cout<<"............ASSIGNING AND MOVE.............\n";
+             /*std::vector <int>v2 =std::move(v);  move works for same type containers..as it moves all values of v to v2..now
+             undefined state of v*/
+    //std::vector<int>v2(v);//for same type containers
+    std::vector<int >v2(v.begin(),v.end());//universal applicable for any type list,vetores,etc.....pointer is returned
+    for (int j = 0; j <v2.size() ; ++j) {
+        cout<<v2[j];
+    }
+   // std::list<int>l1(v);    ----- error type not compatible
+   /* std::list<int>l1(v.begin(),v.end());  as begin and end returns pointer which
+             makes it applicable*/
+
+        cout<<"\n assign feature \n";
+   /* std::vector<int>temp;
+    temp.assign(v.begin(),v.end());
+    for (int k = 0; k <v.size() ; ++k) {
+        cout<<temp[k];//temp.at(k)
+    }
+
+    std::vector<int>insert;
+    std::vector<int>::iterator w;
+
+       // insert.insert(i,i+1); error.....first argument should be of iterator type
+    int i=0;
+        for (w=v.begin();w!=v.end();w++,i++)
+        {
+            *w=i+1;
+            insert.insert(w,i+1);
+            cout<<*w;
+        }
+    //printing
+    cout<<"\n.....printing\n";*/
+                cout<<"\nbool implementation\n";
+        vector<bool>c(v.begin(),v.end());
+    for (int k = 0; k <c.size() ; ++k) {
+       // c[k].flip();
+        cout<<c[k]<<"\t";
+
+    }
+
+
+ std::vector<int>v { 0 ,1 ,5 ,6 ,8};
+    vector<int >v1;
+    v1.assign(v.begin(),v.end());
+    cout<<v1[2];

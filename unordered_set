@@ -1,0 +1,13 @@
+unordered_set<char>d;
+ unordered_set<char>::iterator i;
+string s("sachinsharma");
+ d.insert(s.begin(),s.end());
+ for (i=d.begin(); i!= d.end() ; ++i) {
+    cout<<*i<<endl;
+ }
+ std::list<char>a(d.end(),d.begin());
+ std::list<char>::iterator h;
+ for (h=a.begin();h!=a.end();h++)
+ {
+  cout<<*h;
+ }

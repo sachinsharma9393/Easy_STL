@@ -1,0 +1,4 @@
+ #include<bitset>
+ std::bitset<32>a(56);
+  cout<<a;
+  cout<<a.bitset();

@@ -1,56 +1,13 @@
-#include <map>
-#include <set>
-#include <list>
-#include <cmath>
-#include <ctime>
-#include <deque>
-#include <queue>
-#include <stack>
-#include <string>
-#include <bitset>
-#include <cstdio>
-#include <limits>
-#include <vector>
-#include <climits>
-#include <cstring>
-#include <cstdlib>
-#include <fstream>
-#include <numeric>
-#include <sstream>
-#include <iostream>
-#include <algorithm>
-#include <unordered_map>
-#include<string>
-
-using namespace std;
-
-int main(){
-
-set<int >s;
-
-    for (int i = 0; i < 10; ++i) {
-        s.insert(10-i);
-    }
+ std::vector<int>v{1,3,8,45,75};
+    std::set<int,greater<int >>s{10,7,54,85};
     set<int>::iterator i;
-    for (i=s.begin(); i!=s.end(); ++i) {
-        cout<<*i<<endl;
+    for (i=s.begin();i!=s.end();i++)
+    {
+        cout<<*i;
     }
-    cout<<"reverse";
-
-
-    for (i=s.begin(); i!=s.end(); ++i) {
-        cout<<*i<<endl;
+    cout<<endl;
+    std::set<int,greater<int>>s1(v.begin(),v.end());
+    for (i=s1.begin();i!=s1.end();i++)
+    {
+        cout<<*i;
     }
-    bool b=std::binary_search(s.begin(),s.end(),5);
-    cout<<b;//1 for true....0 for false
-
-
-
-    return 0;
-
-
-}
-
-
-
-

@@ -1,0 +1,14 @@
+int t;
+  cin>>t;
+  vector<int>v(t);
+  for (int i = 0; i < t; ++i) {
+    unsigned long n;cin>>n;
+    v[i]=n;
+  }
+  for (int i = 0; i < t; ++i) {
+
+    std::bitset<32>n1;
+    n1=v[i];
+    n1.flip();
+    cout<<n1.to_ullong()<<endl;
+  }

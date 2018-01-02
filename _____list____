@@ -1,0 +1,36 @@
+ list<int>l{0 ,1 ,2 ,5};
+    cout<<l.front()<<"\t";
+    cout<<l.back();
+    //constructor copying element same
+    //assign same
+    //move for same type
+    //insert same
+    // no [],,,, no at().....no random access
+
+        list<int>l1(l);
+        list<int>l2(l.begin(),l.end());
+        list<int>l3=std::move(l);
+        list<int>l4;
+             l4.assign(l3.begin(),l3.end());
+
+        //reverse iteration
+    cout<<"\n";
+        list<int>::iterator i;
+
+        for (i=l.begin();i!=l.end();i++)//use l,l1,l2,l3,l4
+        {
+            cout <<*i;                                     // l1,l2 ok,l3 ok ,l4 ok, l is moved to l3...no state existence for
+
+        }
+    cout<<"\n  ....merged.....\n";
+    l4.merge(l3); //sorts automatically in increasing order
+    l4.sort(greater<int>());//sorts in decreasing order
+    l4.unique();//removes multiple occurences
+
+    for (i = l4.begin(); i!=l4.end() ; ++i) {
+        cout<<*i;
+    }
+
+   /* int *p=&l.begin().operator*() ;
+    int *q=&l3.begin().operator*();
+    cout<<*p<<"\t "<<*q;*/

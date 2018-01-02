@@ -1,0 +1,9 @@
+ std::vector<int>v{ 1,23,3,3,4,5,7};
+    std::vector<int>v1(v);
+    for (int i = 0; i <v1.size() ; ++i) {
+        cout<<v1[i];
+    }
+    //std::list<int>l(v); error ...bcoz type different
+   // list<int>l(v.begin(),v.end());//correct bcoz argument of pointer type....
+
+    // vector<int>l=move(v);  correct

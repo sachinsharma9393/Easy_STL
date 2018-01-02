@@ -1,0 +1,19 @@
+ //initialization same as vector.....random accessing
+    std::vector <int>v{1,2,5,6};
+    deque<int>d(v.begin(),v.end());
+
+cout<<d.at(2);
+    //assign same
+    //move for same type
+    //insert same
+    // no [],,,,use at
+    cout<<"front : "<<d.front()<<"\n";// 1st element
+    cout<<"back :  "<<d.back()<< "\n"; // last element
+    d.erase(d.begin());
+    cout<<d.front()<<"\n";
+    d.erase(d.end());
+    cout<<d.back();
+    d.push_back(45);
+    d.push_front(10);
+    d.pop_back();
+    d.pop_front();
