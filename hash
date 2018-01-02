@@ -1,0 +1,14 @@
+//printing repeated ocurrences
+   string s="sachin sharma";
+    map <int,char>hash;
+    cout<<s.length();
+    for (unsigned int i = 0; i <s.length() ; ++i) {
+        if(s.at(i)==hash.value_comp())
+        {
+            cout<<s.at(i);
+        }
+        else
+        {
+            //hash.insert(i,ha);
+        }
+    }

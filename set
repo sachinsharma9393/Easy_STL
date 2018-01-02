@@ -1,0 +1,56 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <unordered_map>
+#include<string>
+
+using namespace std;
+
+int main(){
+
+set<int >s;
+
+    for (int i = 0; i < 10; ++i) {
+        s.insert(10-i);
+    }
+    set<int>::iterator i;
+    for (i=s.begin(); i!=s.end(); ++i) {
+        cout<<*i<<endl;
+    }
+    cout<<"reverse";
+
+
+    for (i=s.begin(); i!=s.end(); ++i) {
+        cout<<*i<<endl;
+    }
+    bool b=std::binary_search(s.begin(),s.end(),5);
+    cout<<b;//1 for true....0 for false
+
+
+
+    return 0;
+
+
+}
+
+
+
+

@@ -1,0 +1,96 @@
+#include <map>
+#include <set>
+#include <list>
+#include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
+#include <cstdio>
+#include <limits>
+#include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <unordered_map>
+#include<string>
+
+using namespace std;
+
+int main(){
+  vector <int >v1;
+    for (int i = 0; i <5 ; ++i) {
+        v1.push_back(1-i);
+    }
+
+    for (unsigned int i = 0; i< 5; ++i) {
+        cout<<v1[i];
+        //v1.at(i);
+    }
+    cout<<endl;
+    std::sort(v1.begin(),v1.end());
+    for (vector<int>::iterator i=v1.begin(); i < v1.end(); ++i) {
+        cout<<*i;
+    }
+    cout<<endl;
+    cout<<"list"<<endl;
+
+   list<int >l;
+    l.push_back(12);
+    l.push_back(10);
+    l.push_front(1);
+    list<int>::iterator i;
+    for (i=l.begin() ; i != l.end(); ++i) {
+        cout<<*i<<"\t";
+    }
+    l.sort();
+    cout<<endl;
+    for (i=l.begin() ; i != l.end(); ++i) {
+        cout<<*i<<"\t";
+    }
+
+        cout<<"\n""deque";
+    deque<int> f;
+    for (int i = 0; i <10 ; ++i) {
+        f.push_back(9-i);
+    }
+    for (int i = 0; i < 9; ++i) {
+        cout<<f[i]<<"\t";
+    }
+    sort(f.begin(),f.end());
+    deque<int>::iterator j;
+    for (j=f.begin();j!=f.end();++j)
+    {
+        cout<<*j<<"\t";
+    }
+    return 0;
+
+}
+
+
+
+
+ list<int >l;
+    l.push_back(12);
+    l.push_back(10);
+    l.push_front(1);
+    list<int>::iterator i;
+    for (i=l.begin() ; i != l.end(); ++i) {
+        cout<<*i<<"\t";
+    }
+    l.sort();
+    cout<<endl;
+    for (i=l.begin() ; i != l.end(); ++i) {
+        cout<<*i<<"\t";
+    }
+    l.reverse();
+    for (i=l.begin() ; i != l.end(); ++i) {
+        cout<<*i<<"\t";
+    }
