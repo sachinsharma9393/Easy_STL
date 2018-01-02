@@ -1,0 +1,28 @@
+
+
+    unordered_multiset<int>hash;
+    unordered_multiset<int>::iterator i;
+    for (int i = 0; i < 10; ++i) {
+        hash.insert(i*2);
+    }
+    i=hash.find(18);
+    //cout<<*i;   print 18  since element is there in the hash
+    i=hash.find(1);
+    //cout<<*i;   will not print anything  if element not found
+  cout<<hash.bucket_count()<<endl;//bucket count is showing 1 size more than size()
+
+    cout<<hash.load_factor()<<endl;
+    cout<<hash.size()<<endl;
+
+    //now adding duplicacy
+    for (int i = 0; i < 10; ++i) {
+        hash.insert(i*2);
+    }
+    cout<<hash.load_factor()<<endl;
+    cout<<hash.bucket_count()<<endl;  //BUCKET IS ALWAYS MADE OF SIZE GREATER THAN HASH SIZE
+    //AS A RESULT   LOAD FACROR =HASH_SIZE/BUCKET_SIZE *100
+    cout<<hash.size()<<endl;
+
+
+    i=hash.find(2);
+    cout<<*i;//i is a location and *i prints elements

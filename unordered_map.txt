@@ -1,0 +1,21 @@
+
+
+    unordered_map<char,int >m;
+    unordered_map<char,int>i;
+    for (int j = 0; j <10 ; ++j) {
+        m.insert(make_pair('a'+j,1));
+    }
+    for (int j = 0; j <5; ++j) {
+        cout<<m.at('a'+j)<<endl;
+    }
+
+    cout<<"size-->"<<m.size()<<"\t\tbucket_count-->"<<m.bucket_count()<<"\t\tload_factor-->"<<m.load_factor();
+
+    //checking for duplicacy
+    for (int j = 0; j <5 ; ++j) {
+        m.insert(make_pair('a',j));
+    }
+
+    cout<<"\nchecking after entering duplicacy"<<endl;
+    cout<<"size-->"<<m.size()<<"\t\tbucket_count-->"<<m.bucket_count()<<"\t\tload_factor-->"<<m.load_factor();
+//result shows no duplicacy allowed

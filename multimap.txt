@@ -1,0 +1,19 @@
+
+
+    //pair<string ,int>k;
+    //map<pair<string,int>>m;
+    multimap<string,int>m;
+    for (int i = 0; i <10 ; ++i) {
+        m.insert(make_pair("s",i));
+    }
+    for (int i = 0; i <10 ; ++i) {
+        m.insert(make_pair("sa",i));
+    }
+    multimap<string,int>::iterator j;
+    for (j=m.begin();j!=m.end();++j)
+    {
+        cout<<j->first<<"\t\t"<<j->second<<endl;
+    }
+cout<<endl;
+    j=m.find("sa");
+    cout<<j->first<<"\t\t"<<j->second;

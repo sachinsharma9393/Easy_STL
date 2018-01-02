@@ -1,0 +1,27 @@
+
+    vector<int >v;                              //if v(10) then size will be 10
+    cout<<v.size();
+    for (int i = 0; i <10 ; ++i) {
+        v.push_back(i+1);                         //through pushback value will be pushed after 10th position
+    }
+    for (int i = 0; i <10 ; ++i) {
+        cout<<v.at(i)<<endl;
+    }
+    cout<<v.size();//if v(10) then here size will be 10+10
+     cout<<endl;
+    //MAKING 2D ARRAY EX. 3*4 ARRAY meaning array of 4 made 3 times
+    vector<int>f(4);//vector of 4
+    vector<vector<int>>d(3,f);//MAKING VECTOR OF 4 ..3TIMES HENCE 2D ARRAY 3*4 OR 3 TIMES ARRAY OF 4
+    cout<<d.size()<<"----"<<f.size();
+    for (int i1 = 0; i1 <d.size() ; ++i1) {
+        for (int j = 0; j <f.size() ; ++j) {
+            d.at(i1).at(j)=i1+j;
+        }
+    }
+    cout<<endl;
+    for (int i = 0; i <d.size() ; ++i) {
+        for (int j = 0; j <f.size() ; ++j) {
+            cout<<d[i][j]<<endl;
+        }
+    }
+

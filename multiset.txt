@@ -1,0 +1,19 @@
+
+multiset<int >s{2,2,2,23,3,3,37};
+multiset<int>::iterator i;
+    cout<<s.size()<<endl<<s.count(2)<<endl;
+    for (i=s.begin();i!=s.end();i++) {
+        cout << *i << "\t\t";//  print in sorted order with duplication
+    }
+
+    i= s.find(23);
+    s.erase(i);
+    for (int i = 0; i <5 ; ++i) {
+        s.insert(i*2);
+    }
+    cout<<endl;
+
+    for (i=s.begin();i!=s.end();i++) {
+        cout << *i << "\t\t";//duplicate elements will be printed and print in sorted order
+    }
+   cout<<endl<< s.count(2);

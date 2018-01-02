@@ -1,0 +1,15 @@
+
+    unordered_set<int>hash;
+    unordered_set<int>::iterator i;
+    for (int i = 0; i < 10; ++i) {
+        hash.insert(i*2);
+    }
+    i=hash.find(18);
+    //cout<<*i;   print 18  since element is there in the hash
+    i=hash.find(1);
+    //cout<<*i;   will not print anything  if element not found
+  cout<<hash.bucket_count()<<endl;
+
+    cout<<hash.load_factor()<<endl;
+    cout<<hash.size();
+
